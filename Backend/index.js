@@ -3,7 +3,7 @@ import express from "express";
 // import cors
 import cors from "cors";
  
-const bodyParser = require('body-parser');
+import bodyParser from "body-parser";
  
 // import routes
 import Router from "./routes/routes.js";

@@ -11,13 +11,25 @@
       <div class="form-group">
         <label for="trainerLastName">Last Name</label>
         <input type="text" class="form-control" id="trainerLastName"
-          v-model="currentTrainer.trainerLastName"
+          v-model="currentTrainer.TrainerLastName"
         />
       </div>
       <div class="form-group">
         <label for="trainerEmail">Email</label>
         <input type="text" class="form-control" id="Email"
           v-model="currentTrainer.trainerEmail"
+        />
+        </div>
+              <div class="form-group">
+        <label for="trainerEmail">Phone</label>
+        <input type="text" class="form-control" id="Phone"
+          v-model="currentTrainer.trainerPhone"
+        />
+        </div>
+              <div class="form-group">
+        <label for="trainerAddress">Address</label>
+        <input type="text" class="form-control" id="Address"
+          v-model="currentTrainer.trainerAddress"
         />
         </div>
     </form>
@@ -37,7 +49,7 @@
 <script>
 import TrainerDataService from "../services/TrainerDataService";
 export default {
-  name: "trainer",
+  name: "trainerList",
   data() {
     return {
       currentTrainer: null,
