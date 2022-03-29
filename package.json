@@ -1,0 +1,39 @@
+{
+  "name": "c",
+  "version": "1.0.0",
+  "description": "CIS 4375 Final Project",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daeyoungchoe/CIS4375Alt.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "mysql",
+    "rest",
+    "api"
+  ],
+  "author": "Team 3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daeyoungchoe/CIS4375Alt/issues"
+  },
+  "homepage": "https://github.com/daeyoungchoe/CIS4375Alt#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "bulma": "^0.9.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0",
+    "vue-router": "^4.0.14"
+  }
+}
