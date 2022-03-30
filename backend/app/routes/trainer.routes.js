@@ -1,12 +1,12 @@
 module.exports = app => {
     const trainer = require("../controllers/trainer.controller.js");
     var router = require("express").Router();
-    // Create a new trainer
+    // Create a new Trainer
     router.post("/", trainer.create);
-    // Retrieve all trainer
+    // Retrieve all Trainers
     router.get("/", trainer.findAll);
-    // Update a trainer with id
-    router.put("/:id", trainer.update);
+    // Update a Trainers with id
+    router.put("/:trainerID", trainer.update);
 
     app.use('/api/trainer', router);
   };

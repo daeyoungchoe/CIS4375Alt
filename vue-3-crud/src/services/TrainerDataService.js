@@ -1,6 +1,6 @@
 import http from "../https-common";
 class TrainerDataService {
-  getAll() {
+  findAll() {
     return http.get("/trainers");
   }
   create(data) {

@@ -7,7 +7,7 @@ const routes =  [
     component: () => import("./components/TrainerList")
   },
   {
-    path: "/edittrainers/:id",
+    path: "/edittrainers/:trainerID",
     name: "updatetrainer",
     component: () => import("./components/EditTrainer")
   },

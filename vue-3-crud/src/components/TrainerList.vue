@@ -32,7 +32,7 @@
         <div>
           <label><strong>Address:</strong></label> {{ currentTrainer.trainerAddress }}
         </div>
-        <router-link :to="'/edittrainers/' + currentTrainer.id" class="badge badge-warning">Edit</router-link>
+        <router-link :to="'/edittrainer/' + currentTrainer.id" class="badge badge-warning">Edit</router-link>
       </div>
       <div v-else>
         <br />
@@ -44,7 +44,7 @@
 <script>
 import TrainerDataService from "../services/TrainerDataService";
 export default {
-  name: "tutorials-list",
+  name: "trainer-list",
   data() {
     return {
       trainers: [],
@@ -53,10 +53,10 @@ export default {
     };
   },
   methods: {
-    retrieveTrainers() {
-      TrainerDataService.getAll()
+    retrieveTrainer() {
+      TrainerDataService.findAll()
         .then(response => {
-          this.tutorials = response.data;
+          this.trainer = response.data;
           console.log(response.data);
         })
         .catch(e => {
@@ -64,13 +64,13 @@ export default {
         });
     },
     refreshList() {
-      this.retrieveTrainers();
-      this.currentTutorial = null;
+      this.retrieveTrainer();
+      this.currentTrainer = null;
       this.currentIndex = -1;
     }
   },
   mounted() {
-    this.retrieveTutorials();
+    this.retrieveTrainer();
   }
 };
 </script>

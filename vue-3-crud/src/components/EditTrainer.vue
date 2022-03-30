@@ -57,8 +57,8 @@ export default {
     };
   },
   methods: {
-    getTrainer(id) {
-      TrainerDataService.get(id)
+    getTrainer(trainerID) {
+      TrainerDataService.get(trainerID)
         .then(response => {
           this.currentTrainer = response.data;
           console.log(response.data);
@@ -68,7 +68,7 @@ export default {
         });
     },
     updateTrainer() {
-      TrainerDataService.update(this.currentTrainer.id, this.currentTrainer)
+      TrainerDataService.update(this.currentTrainer.trainerID, this.currentTrainer)
         .then(response => {
           console.log(response.data);
           this.message = 'The trainer was updated successfully!';
@@ -80,7 +80,7 @@ export default {
   },
   mounted() {
     this.message = '';
-    this.getTrainer(this.$route.params.id);
+    this.getTrainer(this.$route.params.trainerID);
   }
 };
 </script>
