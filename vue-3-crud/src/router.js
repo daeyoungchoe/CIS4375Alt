@@ -3,17 +3,17 @@ const routes =  [
   {
     path: "/",
     alias: "/trainerlist",
-    name: "get trainer",
+    name: "gettrainer",
     component: () => import("./components/TrainerList")
   },
   {
     path: "/edittrainers/:id",
-    name: "update trainer",
+    name: "updatetrainer",
     component: () => import("./components/EditTrainer")
   },
   {
     path: "/addtrainer",
-    name: "add trainer",
+    name: "addtrainer",
     component: () => import("./components/AddTrainer")
   }
 ];
